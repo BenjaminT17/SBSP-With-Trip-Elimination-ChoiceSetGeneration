@@ -52,6 +52,8 @@ NOTE: If not specified, capacity is fixed at an arbitrary level (60) as it is no
 ### demandInputFileGeneration.py
 **Purpose:** This script creates the demand and zone Fast-Trips files for each person. The demand file information is extracted from the on board survey while the zone file includes the origin and destination latitude and longitudes as identified by their respective TAZ identifier (OrigTAZ, DestTAZ).  
 
+**Make sure that row[accessModeIndex] and row[egressModeIndex] exactly match the listed walk mode in the on board survey. For example "Walk" vs. "Walked all the way" vs. "Walk all the way."**
+
 NOTE: Origin, Destination, and zoneID are placeholder values in which an 'O' or a 'D' is appended to the front of the passenger ID. For example, passenger ID 17 has origin TAz O17 and destination TAz D17.
 
 | Output File                |  Header 1   |  Header 2   |  Header 3 |  Header 4     |  Header 5  |  Header 6 | Header 7 | Header 8 | 
