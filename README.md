@@ -84,6 +84,8 @@ NOTE: Origin, Destination, and zoneID are placeholder values in which an 'O' or 
 * **weights**: 
   * **List** of weights denoting how time is percieved with 1.0 being one minute is percieved as one minute
   * [IVT Weight, Waiting Time Weight, Walking Time Weight, Transfer Penalty (Listed as a flat amount of minutes rather than factor)] 
+* **avgUnlinkedPathTimeMinutes**:
+  * Average unlinked trip time in minutes (i.e. average in-vehicle time of one trip component and transfer time). Used to calculated preferred time of departure (PDT) from surveyed time if surveyed route isn' the first.
   
 NOTE: All input varaibles that need user-input assignment are at the beginning of the script except for the last three.
 
