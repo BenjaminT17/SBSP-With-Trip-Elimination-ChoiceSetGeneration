@@ -3,12 +3,12 @@
 * Generate a specified number of attractive transit paths connecting a passenger's origin and destination coordinates
 * The generate choice set will then be used to estimate a multinomial logit (MNL) transit route choice model
 
-#### Input Data Needed
+## Input Data Needed
 * GTFS Transit Network Structure
 * OpenStreetMap Sidewalk Walking Network
-* Passenger origin and destination location coordinates (Typically aquired from a transit On Board Survey)
+* Passenger origin and destination location coordinates (Typically acquired from a transit On Board Survey)
 
-#### Workflow and Corresponding Python File
+## Workflow and Corresponding Python File
 1. Convert GTFS into a series of Fast-Trips formated .dat files and generate transfer links  **(gtfs2FastTripsDat.py)**
 1. Reformat On Board Survey (OBS) data to meet following requirements **(reformatOBS.py)**
 1. Generate attractive choice set **(choiceSetGeneration.py)** and **(demandInputFileGeneration.py)**
@@ -38,9 +38,16 @@ NOTE: If not specified, capacity is fixed at an arbitrary level (60) as it is no
 
 
 ### reformatOBS.py
+**Purpose:** Change several headers and create new columns in order to be in compliance with requirements for following steps. The contents of this file will likely vary greatly based on the current survey contents.
+
+**Potential Adjustments to Make**
+* Create a column indicating if the passenger traversed his/her path in the 'AM' or 'PM'
+* Create/reformat column to indicate at what time the passenger was surveyed **in minutes past midnight**
 
 ### demandInputFileGeneration.py
-The following two files with the requisite headers and capitalization are produced. Origin, Destination, and zoneID are placeholder values in which an 'O' or a 'D' is appended to the front of the passenger ID. For example, passenger ID 17 has origin TAz O17 and destination TAz D17.
+**Purpose:** This script creates the demand and zone Fast-Trips files. The demand file information is extracted from the on board survey while the zone file includes the origin and destination latitude and longitudes as identified by their respective TAZ identifier (OrigTAZ, DestTAZ).  
+
+NOTE: Origin, Destination, and zoneID are placeholder values in which an 'O' or a 'D' is appended to the front of the passenger ID. For example, passenger ID 17 has origin TAz O17 and destination TAz D17.
 
 | Output File                |  Header 1   |  Header 2   |  Header 3 |  Header 4     |  Header 5  |  Header 6 | Header 7 | Header 8 | 
 |:-------------------------- |:-----------:| :----------:|:--------:|:------:|:-----------:|:---------:|:-----:|:------------:|
