@@ -15,7 +15,8 @@
 
 
 
-## Description of Each File
+# Description of Each File
+## Data Cleaning Files
 ### gtfs2FastTripsDat.py
 #### Inputs
 * **inputGTFSPath:** Path to folder containing GTFS .txt files
@@ -62,7 +63,7 @@ NOTE: Origin, Destination, and zoneID are placeholder values in which an 'O' or 
 | **ft_input_zones.dat**     | zoneId      | Latitude    | Longitude |       |	           |           |       |              |
 
 ***
-
+## Choice Set Generation Algorithm File
 ### choiceSetGeneration.py
 **Purpose:** This is the primary script. 
 
@@ -121,3 +122,6 @@ NOTE: All input varaibles that need user-input assignment are at the beginning o
     * Remove, one at a time, each trip on the shortest path (and all associated network links and nodes) and re-run body of algorithm to generate a new path.
     * Keep generating new paths for each person until the desired number has been reached
 
+***
+
+## Logit Model File
