@@ -90,7 +90,7 @@ NOTE: Origin, Destination, and zoneID are placeholder values in which an 'O' or 
 * **avgUnlinkedPathTimeMinutes**:
   * Average unlinked trip time in minutes (i.e. average in-vehicle time of one trip component and transfer time). Used to calculated preferred time of departure (PDT) from surveyed time if surveyed route isn' the first.
   
-NOTE: All input varaibles that need user-input assignment are at the beginning of the script except for the last three.
+NOTE: All input variables that need user-input assignment are at the beginning of the script except for the last three.
 
 | OBS Header Variable Needing Assignment    |  Example String to Input     | 
 |:------------------------------------------|:----------------------------:|
